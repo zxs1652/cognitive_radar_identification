@@ -38,7 +38,7 @@ This repository contains MATLAB scripts and functions to implement and analyze c
     2. Causality inference.
   - This script is used to make decisions regarding cognitive/non-cognitive radar.
   - This figure shows the mutual information + AD-test and causality inference under uncertainty of radar position.
-  <img src="figs/AD_test_cog_sigma.png" alt="AD-Test" width="1000" />
+  <img src="figs/AD_test_cog_sigma_15" alt="AD-Test" width="1000" />
   <img src="figs/causality_inference_sigma_15.png" alt="Causality Inference" width="600" />
 
 ### 7. `radarScenario_range_based_data_analysis_all_error_pos.m`
