@@ -16,6 +16,10 @@ This repository contains MATLAB scripts and functions to implement and analyze c
   - Implements the cognitive radar environment.
   - The cognitive behavior focuses on an optimal power allocation strategy.
   - The trajectory of the target is fixed.
+  - This figure shows the tracking performance of cognitive/non-cognitive radars.
+    ![Tracking Performance](figs/comparison_beamformer_output.png)
+
+The above figure illustrates the radar setup used in our experiments.
 
 ### 4. `radarScenario_range_based_policies_performance_rand_path.m`
 - **Description**: 
