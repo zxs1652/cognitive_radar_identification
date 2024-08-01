@@ -1,34 +1,61 @@
-# cognitive_radar_identification
-Project FREEDOM 2.2.1: Cognitive Radar Identification
+# Cognitive Radar Identification
+**Project FREEDOM 2.2.1: Cognitive Radar Identification**
 
-radarConfig.m:					set and config the radar and waveform parameters.
-radarScenario_range_based.m: 	The most basic script for ranged-based radar tracking. 
-radarScenario_range_based_policies_performance_fix_path.m:
-								implement the cognitive radar environment.
-								The cognitive behavior is for optimal power allocation strategy.
-								The trahectory of the target is fixed.
-radarScenario_range_based_policies_performance_rand_path.m:
-								implement the cognitive radar environment.
-								The trajectory of the target is randomly generated.
-radarScenario_range_based_data_collection_pos_error.m:
-								implement the beamforming and collect the data (power estimation and dis).
-								The data is generated based on different uncertainties of the radar position.\
-radarScenario_range_based_data_analysis_one_error_pos.m:
-								use the	1) mutual information and AD-test
-										2) casuality inference
-								to make the decision of cognitive/non-cognitive radar.
-								This script is for analyzing one of the realization.
-radarScenario_range_based_data_analysis_all_error_pos.m:
-								use the	1) mutual information and AD-test
-										2) casuality inference
-								to make the decision of cognitive/non-cognitive radar.
-								This script is for analyzing all of Monte Carlo experiments
-								and give the probability of the Type-I and Type-II error.
+This repository contains MATLAB scripts and functions to implement and analyze cognitive radar environments, focusing on optimal power allocation strategies and target trajectory tracking.
 
+## Files and Scripts
 
-Extra packages:
-All Scrtipts can be run on the MATLAB (version > 2023a)
-You may install extra packages to fully run the scripts:
-	-- Statistics and Machine Learning Toolbox (for KDE method)
-	-- Optimization Toolbox (for power optimization)
-	-- Parallel Computing Toolbox (for quick process when collecting data and compute mutual information)
+### 1. `radarConfig.m`
+- **Description**: Sets and configures the radar and waveform parameters.
+
+### 2. `radarScenario_range_based.m`
+- **Description**: The most basic script for range-based radar tracking.
+
+### 3. `radarScenario_range_based_policies_performance_fix_path.m`
+- **Description**: 
+  - Implements the cognitive radar environment.
+  - The cognitive behavior focuses on an optimal power allocation strategy.
+  - The trajectory of the target is fixed.
+
+### 4. `radarScenario_range_based_policies_performance_rand_path.m`
+- **Description**: 
+  - Implements the cognitive radar environment.
+  - The trajectory of the target is randomly generated.
+
+### 5. `radarScenario_range_based_data_collection_pos_error.m`
+- **Description**: 
+  - Implements beamforming and collects data (power estimation and distance).
+  - The data is generated based on different uncertainties of the radar position.
+
+### 6. `radarScenario_range_based_data_analysis_one_error_pos.m`
+- **Description**: 
+  - Analyzes one realization using:
+    1. Mutual Information and AD-test.
+    2. Causality inference.
+  - This script is used to make decisions regarding cognitive/non-cognitive radar.
+
+### 7. `radarScenario_range_based_data_analysis_all_error_pos.m`
+- **Description**: 
+  - Analyzes all Monte Carlo experiments using:
+    1. Mutual Information and AD-test.
+    2. Causality inference.
+  - Provides the probability of Type-I and Type-II errors in cognitive radar decisions.
+
+## Requirements
+
+All scripts can be run on MATLAB (version 2023a or later). Additionally, you may need to install the following extra packages:
+
+- **Statistics and Machine Learning Toolbox** (for KDE method)
+- **Optimization Toolbox** (for power optimization)
+- **Parallel Computing Toolbox** (for faster processing when collecting data and computing mutual information)
+
+## How to Run
+
+1. Clone this repository to your local machine.
+2. Open MATLAB and navigate to the directory where the repository is cloned.
+3. Ensure that all required toolboxes are installed.
+4. Run the desired script as per your requirement.
+
+## Contact
+
+For any questions or inquiries, please contact Shuo[tang.shu@northeastern.edu].
