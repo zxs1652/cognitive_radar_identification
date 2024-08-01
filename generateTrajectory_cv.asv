@@ -1,0 +1,22 @@
+function [pos, vel] = generateTrajectory_cv(height, nEpochs,Ts)
+%GENERATETRAJECTORY Summary of this function goes here
+%   x0 -- initial starting position
+%   nEpochs --  time steps desired
+%   tr -- turning rate
+%   Ts -- sampling period
+% Define larger rectangle [xMin, yMin, width, height]
+largerRect = [-2500, -2500, 5000, 5000];
+
+% Define smaller rectangle [xMin, yMin, width, height]
+smallerRect = [-1000, -1000, 2000, 2000];
+
+% random select start point and end point
+start_xy = randomPointInRectExclude(largerRect, smallerRect);
+end_xy = randomPointInRectExclude(largerRect, smallerRect);
+
+
+% generate path
+path_x = linspace(start_xy(1), end_xy(1), nEpochs);
+path_y = linspace(start_xy(2), end_xy(2), nEpochs);
+path_z = height * ones(nEpochs,)
+tarPos = [path_x;path_y;]
